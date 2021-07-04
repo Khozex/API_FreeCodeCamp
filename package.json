@@ -14,8 +14,7 @@
 	"author": "Khozex",
 	"license": "MIT",
 	"dependencies": {
-		"express": "^4.9.8",
-		"moment": "^2.10.2"
+		"express": "^4.9.8"
 	},
 	"engines": {
 		"node": "14.x"
