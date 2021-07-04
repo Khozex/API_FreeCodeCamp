@@ -1,22 +1,14 @@
 {
-	"name": "testnode",
-	"version": "1.0.0",
-	"description": "This example is so cool.",
+	"name": "fcc-learn-node-with-express",
+	"version": "0.1.0",
+	"dependencies": {
+		"express": "^4.14.0",
+		"body-parser": "^1.15.2",
+		"cookie-parser": "^1.4.3",
+		"fcc-express-bground": "https://github.com/freeCodeCamp/fcc-express-bground-pkg.git"
+	},
 	"main": "server.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [
-		"example",
-		"heroku",
-		"freecodecamp"
-	],
-	"author": "Khozex",
-	"license": "MIT",
-	"dependencies": {
-		"express": "^4.9.8"
-	},
-	"engines": {
-		"node": "14.x"
+		"start": "node server.js"
 	}
 }
