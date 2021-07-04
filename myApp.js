@@ -9,8 +9,9 @@ var app = express();
 
 
 
-app.get("/",(req,res) =>{
-res.send("Hello Express");
+app.get("/", (req, res) => {
+    let path = __dirname + "/views/index.html";
+    res.sendFile(path);
 });
 
 
@@ -31,4 +32,4 @@ res.send("Hello Express");
 
 
 
- module.exports = app;
+module.exports = app;
