@@ -12,7 +12,7 @@ var app = express();
 
 
 
-console.log("Hello Wordl");
+console.log("Hello World");
 
 
 
