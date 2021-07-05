@@ -50,7 +50,9 @@ app.route("/name").get((req, res) => {
     });
 
 }).post((req, res) => {
-    res.json({"name" : req.body.frist + " " + req.body.last})
+    res.json({
+        "name" : req.body.first + " " + req.body.last
+    })
 })
 
 app.use("/public", express.static(__dirname + "/public"));
