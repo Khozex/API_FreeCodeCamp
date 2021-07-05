@@ -1,22 +1,6 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
-console.log(mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true }));
-
-
-let personSchema = new mongoose.Schema({
-  name: {type: String, required: true},
-  age: Number,
-  favoriteFoods: [String]
-});
-
-var Person = mongoose.model("Person",personSchema);
-
-let khozexPerson = new Person({
-  name: "Khozex",
-  age: 20,
-  favoriteFoods: ["Pizza","Sushi"]
-});
-
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
 };
@@ -71,7 +55,6 @@ const queryChain = (done) => {
 
 //----- **DO NOT EDIT BELOW THIS LINE** ----------------------------------
 
-exports.PersonModel = Person;
 exports.createAndSavePerson = createAndSavePerson;
 exports.findPeopleByName = findPeopleByName;
 exports.findOneByFood = findOneByFood;
