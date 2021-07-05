@@ -5,8 +5,8 @@ require('dotenv').config();
 
 
 
-app.use((req,res,next) => {
-    console.log(req.method + " " + req.path +" - " + req.ip);
+app.use((req, res, next) => {
+    console.log(req.method + " " + req.path + " - " + req.ip);
     next();
 })
 
@@ -27,6 +27,16 @@ app.get("/json", (req, res) => {
 
     res.json(jsonResponse);
 })
+
+app.get("/now", (req, res, next) => {
+    req.time = new Date().toString();
+    next();
+}, (req, res) => {
+    res.json({
+        "time" : req.time
+    })
+}
+)
 
 
 
