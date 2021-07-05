@@ -1,10 +1,10 @@
 var express = require('express');
-var bodyParse = require('body-parser');
+var bodyParser = require('body-parser');
 var app = express();
 require('dotenv').config();
 
 app.use(bodyParser.urlencoded({ extended: false }))
-
+app.use(bodyParser.json());
 
 app.use((req, res, next) => {
     console.log(req.method + " " + req.path + " - " + req.ip);
